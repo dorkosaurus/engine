@@ -51,6 +51,7 @@ void addition(){
 
 int main(){
     identity();
+    equality();
     product();
     addition();
 }
