@@ -26,11 +26,11 @@ void product(){
 }
 
 void equality(){
-    bool expected=false;
     GVector one(1,2,3);
     GVector two(3,4,5);
     GVector three(1,2,3);
 
+    bool expected=false;
     bool actual = one.equals(two);
     if(expected != actual)cout<<"!equality(false)"<<endl;
 
