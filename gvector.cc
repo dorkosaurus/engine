@@ -4,7 +4,7 @@ GVector::GVector(int xLength,int yLength, int zLength){
     y=yLength;
     z=zLength;
 }    
-GVector GVector::addition(GVector c){
+GVector GVector::add(GVector c){
                    GVector newVector(
                                 (c.getX()+getX()),
                                 (c.getY()+getY()),
@@ -12,4 +12,10 @@ GVector GVector::addition(GVector c){
                             );
                     return newVector;
    }
-    
+bool GVector::equals(GVector c){
+        bool ret=true;
+        if(c.getX()!=getX())ret=false;
+        if(c.getY()!=getY())ret=false;
+        if(c.getZ()!=getZ())ret=false;
+        return ret;
+}  

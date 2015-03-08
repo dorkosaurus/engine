@@ -11,6 +11,7 @@ class GVector{
         int getY(){return y;}
         int getZ(){return z;}
         int product(int c){return (c*x)+(c*y)+(c*z);}
-        GVector addition(GVector c);
+        GVector add(GVector c);
+        bool equals(GVector c);
 };
 #endif
