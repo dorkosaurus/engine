@@ -1,17 +1,37 @@
+#include <math.h>
+#include <sstream>
+#include <string>
+using namespace std;    
+
 #ifndef GVector_H
 #define GVector_H
-
 class GVector{
-    private:
-        int x,y,z;
-        int length;
-    public:
-        GVector(int xLength,int yLength, int zLength);
-        int getX(){return x;}
-        int getY(){return y;}
-        int getZ(){return z;}
-        int product(int c){return (c*x)+(c*y)+(c*z);}
-        GVector add(GVector c);
-        bool equals(GVector c);
+        private:
+                double x,y,z;
+                double length;
+
+        public:
+                double GetX();
+                double GetY();
+                double GetZ();
+                double GetLength();
+
+                GVector Scale(double scalar);
+
+                double DotProduct(GVector A);
+
+                double SquaredDotProduct();
+
+                double Length();
+
+                GVector PerpendicularXY();
+
+                GVector Add(GVector c);
+
+
+                GVector(double x_length,double y_length, double z_length);
+
+                bool Equals(GVector c);
+                string ToString();
 };
 #endif
